@@ -1,6 +1,8 @@
-package pl.MartaHa.ElevManagement;
+package pl.MartaHa.ElevManagement.state;
 
-public class Stop implements  ElevatorState {
+import pl.MartaHa.ElevManagement.elevator.Elevator;
+
+public class Stop implements ElevatorState {
 
     Elevator elevator;
 

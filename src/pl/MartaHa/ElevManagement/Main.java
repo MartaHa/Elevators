@@ -1,5 +1,8 @@
 package pl.MartaHa.ElevManagement;
 
+import pl.MartaHa.ElevManagement.elevator.Elevator;
+import pl.MartaHa.ElevManagement.elevator.dao.ElevatorMapDao;
+
 import java.util.Map;
 import java.util.Random;
 
@@ -10,7 +13,7 @@ public class Main {
 
         //first SetUp
 
-        ElevatorMap map = new ElevatorMap();
+        ElevatorMapDao map = new ElevatorMapDao();
         Map<Integer, Elevator> buidlingElevators = map.getElevatorMap();
 
         for (int i=1; i<=5; i++){

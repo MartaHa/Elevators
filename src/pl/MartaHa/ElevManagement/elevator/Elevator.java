@@ -1,4 +1,7 @@
-package pl.MartaHa.ElevManagement;
+package pl.MartaHa.ElevManagement.elevator;
+
+import pl.MartaHa.ElevManagement.state.ElevatorState;
+import pl.MartaHa.ElevManagement.state.Stop;
 
 public class Elevator {
 
