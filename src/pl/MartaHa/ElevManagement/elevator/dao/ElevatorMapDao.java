@@ -20,8 +20,15 @@ public class ElevatorMapDao implements ElevatorDao {
 
     @Override
     public Map<Integer, Elevator> getWorkingElevators() {
-        Map <Integer, Elevator> workingElevators = new HashMap<>();
-        workingElevators = elevatorMap.entrySet().stream().filter(a->a.getValue().getElevatorState().equals("WORKING")).collect(Collectors.toMap(e->e.getKey(), e->e.getValue()));
+        Map <Integer, Elevator> workingElevators = elevatorMap.entrySet().stream()
+                .filter(a->a.getValue().getElevatorState().equals("WORKING"))
+                .collect(Collectors.toMap(e->e.getKey(), e->e.getValue()));
         return workingElevators;
     }
+
+    @Override
+    public String setElevatorsMap(int number) {
+        return null;
+    }
+
 }

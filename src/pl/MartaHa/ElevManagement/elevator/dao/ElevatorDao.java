@@ -6,6 +6,6 @@ import java.util.Map;
 public interface ElevatorDao {
 
     Map<Integer, Elevator> getWorkingElevators();
-
+    String setElevatorsMap(int number);
 
 }

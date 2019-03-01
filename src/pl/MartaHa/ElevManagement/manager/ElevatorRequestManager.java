@@ -1,5 +1,6 @@
 package pl.MartaHa.ElevManagement.manager;
 
+import pl.MartaHa.ElevManagement.elevator.Elevator;
 import pl.MartaHa.ElevManagement.elevator.dao.ElevatorMapDao;
 import pl.MartaHa.ElevManagement.request.User;
 
@@ -13,9 +14,9 @@ public class ElevatorRequestManager {
         this.user = user;
     }
 
-    public static void processRequest(){
+    public static void processRequest(int currentFloor, int destiantionFloor , Elevator elevator){
 
-        //get the user request
+
 
 
     }

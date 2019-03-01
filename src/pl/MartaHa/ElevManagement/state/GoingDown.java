@@ -2,17 +2,16 @@ package pl.MartaHa.ElevManagement.state;
 
 import pl.MartaHa.ElevManagement.elevator.Elevator;
 
-
-public class Stop implements ElevatorState {
+public class GoingDown implements ElevatorState {
 
     Elevator elevator;
 
-    public Stop(Elevator elevator) {
+    public GoingDown(Elevator elevator) {
         this.elevator = elevator;
     }
 
     @Override
     public void changeState() {
-        elevator.setElevatorState(new Working(elevator));
+        elevator.setElevatorState(new Stop(elevator));
     }
 }

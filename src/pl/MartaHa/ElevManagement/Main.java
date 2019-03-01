@@ -18,11 +18,11 @@ public class Main {
 
         for (int i=1; i<=5; i++){
             Random random = new Random();
-            int randomFloor = random.nextInt();
+            int randomFloor = random.nextInt(9)+1;
             Elevator elevator = new Elevator(i,randomFloor);
             buidlingElevators.put(i,elevator);
         }
-        System.out.println(buidlingElevators.toString());
+        System.out.println(buidlingElevators);
 
         System.out.println("Stop!");
     }

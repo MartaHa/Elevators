@@ -1,9 +1,10 @@
 package pl.MartaHa.ElevManagement.elevator;
-
 import pl.MartaHa.ElevManagement.state.ElevatorState;
 import pl.MartaHa.ElevManagement.state.Stop;
 
-public class Elevator {
+import java.util.Objects;
+
+public class Elevator implements  ElevatorState{
 
     private int id;
     private int floor;
@@ -40,11 +41,29 @@ public class Elevator {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Elevator elevator = (Elevator) o;
+        return id == elevator.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    @Override
     public String toString() {
         return "Elevator{" +
                 "id=" + id +
                 ", floor=" + floor +
                 ", elevatorState=" + elevatorState +
                 '}';
+    }
+
+    @Override
+    public void changeState() {
+        elevatorState.changeState();
     }
 }
