@@ -1,22 +1,25 @@
 package pl.MartaHa.ElevManagement.manager;
 
-import pl.MartaHa.ElevManagement.elevator.Elevator;
+import pl.MartaHa.ElevManagement.elevator.model.Elevator;
 import pl.MartaHa.ElevManagement.elevator.dao.ElevatorMapDao;
-import pl.MartaHa.ElevManagement.request.User;
+import pl.MartaHa.ElevManagement.request.model.Request;
+import pl.MartaHa.ElevManagement.request.dao.RequestsQueueDao;
+
+import java.util.Map;
 
 public class ElevatorRequestManager {
 
-    private final ElevatorMapDao elevatorMap;
-    private final User user;
+    private final ElevatorMapDao elevatorMapDao;
+    private final RequestsQueueDao requestsQueueDao;
 
-    public ElevatorRequestManager(ElevatorMapDao elevatorMap, User user) {
-        this.elevatorMap = elevatorMap;
-        this.user = user;
+    public ElevatorRequestManager(ElevatorMapDao elevatorMapDao, RequestsQueueDao requestsQueueDao) {
+        this.elevatorMapDao = elevatorMapDao;
+        this.requestsQueueDao = requestsQueueDao;
     }
 
-    public static void processRequest(int currentFloor, int destiantionFloor , Elevator elevator){
-
-
+    public void manageRequest() {
+        Map<Integer, Elevator> notWorkingElevators = elevatorMapDao.getNotWorkingElevators();
+        Request request = requestsQueueDao.getFirstRequest();
 
 
     }

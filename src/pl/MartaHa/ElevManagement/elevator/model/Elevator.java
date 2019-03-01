@@ -1,4 +1,4 @@
-package pl.MartaHa.ElevManagement.elevator;
+package pl.MartaHa.ElevManagement.elevator.model;
 import pl.MartaHa.ElevManagement.state.ElevatorState;
 import pl.MartaHa.ElevManagement.state.Stop;
 

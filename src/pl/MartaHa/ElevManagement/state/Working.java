@@ -1,5 +1,5 @@
 package pl.MartaHa.ElevManagement.state;
-import pl.MartaHa.ElevManagement.elevator.Elevator;
+import pl.MartaHa.ElevManagement.elevator.model.Elevator;
 
 public class Working implements ElevatorState {
 

@@ -1,6 +1,6 @@
 package pl.MartaHa.ElevManagement.elevator.dao;
 
-import pl.MartaHa.ElevManagement.elevator.Elevator;
+import pl.MartaHa.ElevManagement.elevator.model.Elevator;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,9 +19,9 @@ public class ElevatorMapDao implements ElevatorDao {
     }
 
     @Override
-    public Map<Integer, Elevator> getWorkingElevators() {
+    public Map<Integer, Elevator> getNotWorkingElevators() {
         Map <Integer, Elevator> workingElevators = elevatorMap.entrySet().stream()
-                .filter(a->a.getValue().getElevatorState().equals("WORKING"))
+                .filter(a->a.getValue().getElevatorState().equals("STOP"))
                 .collect(Collectors.toMap(e->e.getKey(), e->e.getValue()));
         return workingElevators;
     }
